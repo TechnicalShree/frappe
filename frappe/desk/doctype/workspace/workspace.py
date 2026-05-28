@@ -69,18 +69,6 @@ class Workspace(Document):
 
 		if self.public and not is_workspace_manager() and not disable_saving_as_public():
 			frappe.throw(_("You need to be Workspace Manager to edit this document"))
-
-		if (
-			not self.public
-			and self.for_user
-			and self.for_user != frappe.session.user
-			and not is_workspace_manager()
-		):
-			frappe.throw(
-				_("You are not allowed to edit this workspace"),
-				frappe.PermissionError,
-			)
-
 		if self.has_value_changed("title"):
 			validate_route_conflict(self.doctype, self.title)
 		else:
@@ -99,6 +87,14 @@ class Workspace(Document):
 		for shortcut in self.get("shortcuts"):
 			if shortcut.type == "Report":
 				shortcut.report_ref_doctype = frappe.get_value("Report", shortcut.link_to, "ref_doctype")
+
+	def before_rename(self, old_name, new_name, merge=False):
+		if self.public and not is_workspace_manager() and not disable_saving_as_public():
+			frappe.throw(
+				_("You need to be {0} to rename this document").format(frappe.bold("Workspace Manager")),
+				frappe.PermissionError,
+				title=_("Permission Error"),
+			)
 
 	def clear_cache(self):
 		super().clear_cache()

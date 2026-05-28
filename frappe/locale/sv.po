@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-01-02 22:45+0000\n"
-"PO-Revision-Date: 2026-02-28 20:31\n"
+"PO-Revision-Date: 2026-04-11 10:20\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
@@ -2308,7 +2308,7 @@ msgstr "Ett oväntat fel inträffade vid auktorisering av {}."
 #. Label of a Section Break field in DocType 'Website Settings'
 #: frappe/website/doctype/website_settings/website_settings.json
 msgid "Analytics"
-msgstr "Analyser"
+msgstr "Statistik"
 
 #: frappe/public/js/frappe/ui/filters/filter.js:35
 msgid "Ancestors Of"
@@ -7540,7 +7540,7 @@ msgstr "Diff"
 #. Description of the 'States' (Section Break) field in DocType 'Workflow'
 #: frappe/workflow/doctype/workflow/workflow.json
 msgid "Different \"States\" this document can exist in. Like \"Open\", \"Pending Approval\" etc."
-msgstr "Olika \"Tillstånd\" som detta dokument kan existera i. T.ex. \"Öppen\", \"Väntar på Godkännande\" etc."
+msgstr "Olika \"Tillstånd\" som detta dokument kan existera i. T. ex. \"Öppen\", \"Väntar Godkännande\" o. s. v."
 
 #. Label of a Int field in DocType 'Document Naming Rule'
 #: frappe/core/doctype/document_naming_rule/document_naming_rule.json
@@ -9720,7 +9720,7 @@ msgstr "Händelser i Dagens Kalender"
 msgid "Every form in ERPNext has a standard set of fields. If you need to capture some information, but there is no standard Field available for it, you can insert Custom Field for it.\n\n"
 "Once custom fields are added, you can use them for reports and analytics charts as well.\n"
 msgstr "Varje formulär i System har standard uppsättning fält. Om du behöver fånga information, men det inte finns något standard fält tillgänglig för det, kan du infoga anpassad fält för det..\n\n"
-"När anpassade fält har lagts till kan du också använda dem för rapporter och analys diagram.\n"
+"När anpassade fält har lagts till kan du också använda dem för rapporter och statistik diagram.\n"
 
 #. Label of a Check field in DocType 'DocShare'
 #: frappe/core/doctype/docshare/docshare.json
@@ -10137,7 +10137,7 @@ msgstr "Misslyckades att skicka e-post meddelande"
 
 #: frappe/desk/page/setup_wizard/setup_wizard.py:24
 msgid "Failed to update global settings"
-msgstr "Misslyckades att uppdatera globala inställningar"
+msgstr "Misslyckades att uppdatera standard inställningar"
 
 #: frappe/integrations/frappe_providers/frappecloud_billing.py:74
 msgid "Failed while calling API {0}"
@@ -11501,11 +11501,11 @@ msgstr "Global Sökning Dokument Typ Återställning."
 #. Name of a DocType
 #: frappe/desk/doctype/global_search_settings/global_search_settings.json
 msgid "Global Search Settings"
-msgstr "Global Sökning Inställningar"
+msgstr "Standard Sökning Inställningar"
 
 #: frappe/public/js/frappe/ui/keyboard.js:121
 msgid "Global Shortcuts"
-msgstr "Globala Genvägar"
+msgstr "Standard Genvägar"
 
 #. Label of a Check field in DocType 'Email Unsubscribe'
 #: frappe/email/doctype/email_unsubscribe/email_unsubscribe.json
@@ -19303,7 +19303,7 @@ msgstr "Personal"
 #: frappe/public/js/frappe/views/workspace/workspace.js:34
 msgctxt "Workspace Category"
 msgid "Personal"
-msgstr "Personal"
+msgstr "Personlig"
 
 #. Name of a DocType
 #: frappe/website/doctype/personal_data_deletion_request/personal_data_deletion_request.json
@@ -19970,7 +19970,7 @@ msgstr "Förberedd Rapport"
 #. Name of a report
 #: frappe/core/report/prepared_report_analytics/prepared_report_analytics.json
 msgid "Prepared Report Analytics"
-msgstr "Förberedd Rapport Analys"
+msgstr "Förberedd Rapport Statistik"
 
 #. Name of a role
 #: frappe/core/doctype/prepared_report/prepared_report.json
@@ -20696,7 +20696,7 @@ msgstr "Dataförfråga Rapport"
 
 #: frappe/core/doctype/recorder/recorder.py:190
 msgid "Query analysis complete. Check suggested indexes."
-msgstr "Frågeanalys klar. Kontrollera föreslagna index."
+msgstr "Frågestatistik klar. Kontrollera föreslagna index."
 
 #: frappe/utils/safe_exec.py:479
 msgid "Query must be of SELECT or read-only WITH type."
@@ -27083,7 +27083,7 @@ msgstr "Detta avslutar jobb omedelbart och kan vara farligt, är du säker?"
 
 #: frappe/core/doctype/user/user.py:1221
 msgid "Throttled"
-msgstr "Strypt"
+msgstr "Begränsad"
 
 #. Label of a Small Text field in DocType 'File'
 #: frappe/core/doctype/file/file.json
@@ -28404,7 +28404,7 @@ msgstr "Uppdatering av räknare kan leda till dokument namn konflikter om det in
 
 #: frappe/desk/page/setup_wizard/setup_wizard.py:23
 msgid "Updating global settings"
-msgstr "Uppdaterar Globala Inställningar"
+msgstr "Uppdaterar Standard Inställningar"
 
 #: frappe/core/doctype/document_naming_settings/document_naming_settings.js:59
 msgid "Updating naming series options"
@@ -29576,7 +29576,7 @@ msgstr "Webbplats"
 #. Name of a report
 #: frappe/website/report/website_analytics/website_analytics.json
 msgid "Website Analytics"
-msgstr "Webbplats Analys"
+msgstr "Webbplats Statistik"
 
 #. Name of a role
 #: frappe/core/doctype/comment/comment.json
@@ -32139,7 +32139,7 @@ msgstr "via Tilldelning Regel"
 
 #: frappe/automation/doctype/auto_repeat/auto_repeat.py:245
 msgid "via Auto Repeat"
-msgstr "genom Återkommande Händelse"
+msgstr "via Återkommande"
 
 #: frappe/core/doctype/data_import/importer.py:267
 #: frappe/core/doctype/data_import/importer.py:288
@@ -32655,7 +32655,7 @@ msgstr "{0} är som {1}"
 
 #: frappe/email/doctype/email_account/email_account.py:172
 msgid "{0} is mandatory"
-msgstr "{0} är erfodrad"
+msgstr "{0} erfordras"
 
 #: frappe/core/doctype/document_naming_rule/document_naming_rule.py:50
 msgid "{0} is not a field of doctype {1}"
@@ -32744,7 +32744,7 @@ msgstr "{0} är en av {1}"
 #: frappe/printing/doctype/print_format/print_format.py:105
 #: frappe/utils/csvutils.py:131
 msgid "{0} is required"
-msgstr "{0} är erfodrad"
+msgstr "{0} erfordras"
 
 #: frappe/public/js/frappe/views/reports/report_view.js:1495
 msgid "{0} is set"

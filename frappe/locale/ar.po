@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-01-02 22:45+0000\n"
-"PO-Revision-Date: 2026-03-02 20:59\n"
+"PO-Revision-Date: 2026-04-22 13:14\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Arabic\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,7 @@ msgstr "تمت إضافة ${values.doctype_name} إلى قائمة الانتظ�
 
 #: frappe/public/js/frappe/ui/toolbar/about.js:11
 msgid "&copy; Frappe Technologies Pvt. Ltd. and contributors"
-msgstr ""
+msgstr "&copy; Frappe Technologies Pvt. Ltd. والمساهمون"
 
 #. Label of a Code field in DocType 'Website Settings'
 #: frappe/website/doctype/website_settings/website_settings.json
@@ -178,7 +178,7 @@ msgstr "قبل شهر"
 
 #: frappe/public/js/print_format_builder/PrintFormat.vue:3
 msgid "1 of 2"
-msgstr ""
+msgstr "1 من 2"
 
 #: frappe/public/js/frappe/data_import/data_exporter.js:227
 msgid "1 record will be exported"
@@ -276,17 +276,17 @@ msgstr "<b>{0}</b> ليس عنوان URL صالحًا"
 #. Content of the 'Help' (HTML) field in DocType 'Property Setter'
 #: frappe/custom/doctype/property_setter/property_setter.json
 msgid "<div class=\"alert\">Please don't update it as it can mess up your form. Use the Customize Form View and Custom Fields to set properties!</div>"
-msgstr ""
+msgstr "<div class=\"alert\">يرجى عدم تحديث هذا لأنه قد يتسبب في إفساد النموذج. استخدم عرض تخصيص النموذج والحقول المخصصة لتعيين الخصائص!</div>"
 
 #. Introduction text of the request-data Web Form
 #: frappe/website/web_form/request_data/request_data.json
 msgid "<div class=\"ql-editor read-mode\"><p>Request a file containing your personally identifiable information (PII) that is saved on our system. The file will be in JSON format and is sent to you by email. If you would like to have your PII deleted from our system, please make a <a href=\"/request-to-delete-data\" rel=\"noopener noreferrer\">request to delete data</a>.</p></div>"
-msgstr ""
+msgstr "<div class=\"ql-editor read-mode\"><p>اطلب ملفًا يحتوي على معلوماتك الشخصية القابلة للتحديد (PII) المحفوظة على نظامنا. سيكون الملف بتنسيق JSON ويتم إرساله إليك عبر البريد الإلكتروني. إذا كنت ترغب في حذف معلوماتك الشخصية من نظامنا، يرجى تقديم <a href=\"/request-to-delete-data\" rel=\"noopener noreferrer\">طلب لحذف البيانات</a>.</p></div>"
 
 #. Introduction text of the request-to-delete-data Web Form
 #: frappe/website/web_form/request_to_delete_data/request_to_delete_data.json
 msgid "<div class=\"ql-editor read-mode\"><p>Send a request to delete your account and personally identifiable information (PII) that is stored on our system. You will receive an email to verify your request. Once the request is verified we will take care of deleting your PII. If you just want to check what PII we have stored, you can <a href=\"/request-data\" rel=\"noopener noreferrer\">request your data</a>.</p></div>"
-msgstr ""
+msgstr "<div class=\"ql-editor read-mode\"><p>أرسل طلبًا لحذف حسابك ومعلوماتك الشخصية القابلة للتحديد (PII) المخزنة على نظامنا. ستتلقى بريدًا إلكترونيًا للتحقق من طلبك. بمجرد التحقق من الطلب، سنتولى حذف معلوماتك الشخصية. إذا كنت تريد فقط التحقق من المعلومات الشخصية المخزنة لدينا، يمكنك <a href=\"/request-data\" rel=\"noopener noreferrer\">طلب بياناتك</a>.</p></div>"
 
 #. Content of the 'Help HTML' (HTML) field in DocType 'Document Naming
 #. Settings'
@@ -347,7 +347,20 @@ msgid "<h3>Custom CSS Help</h3>\n\n"
 "<p>1. Add border to sections except the last section</p>\n\n"
 "<pre><code>.section-break { padding: 30px 0px; border-bottom: 1px solid #eee; }\n"
 ".section-break:last-child { padding-bottom: 0px; border-bottom: 0px;  }</code></pre>\n"
-msgstr ""
+msgstr "<h3>مساعدة CSS المخصصة</h3>\n\n"
+"<p>ملاحظات:</p>\n\n"
+"<ol>\n"
+"<li>جميع مجموعات الحقول (تسمية + قيمة) لها السمات <code>data-fieldtype</code> و <code>data-fieldname</code></li>\n"
+"<li>جميع القيم تُعطى الفئة <code>value</code></li>\n"
+"<li>جميع فواصل الأقسام تُعطى الفئة <code>section-break</code></li>\n"
+"<li>جميع فواصل الأعمدة تُعطى الفئة <code>column-break</code></li>\n"
+"</ol>\n\n"
+"<h4>أمثلة</h4>\n\n"
+"<p>1. محاذاة الأعداد الصحيحة لليسار</p>\n\n"
+"<pre><code>[data-fieldtype=\"Int\"] .value { text-align: left; }</code></pre>\n\n"
+"<p>1. إضافة حد للأقسام باستثناء القسم الأخير</p>\n\n"
+"<pre><code>.section-break { padding: 30px 0px; border-bottom: 1px solid #eee; }\n"
+".section-break:last-child { padding-bottom: 0px; border-bottom: 0px;  }</code></pre>\n"
 
 #. Content of the 'Print Format Help' (HTML) field in DocType 'Print Format'
 #: frappe/printing/doctype/print_format/print_format.json
@@ -418,7 +431,72 @@ msgid "<h3>Print Format Help</h3>\n"
 "\t\t</tr>\n"
 "\t</tbody>\n"
 "</table>\n"
-msgstr ""
+msgstr "<h3>مساعدة تنسيق الطباعة</h3>\n"
+"<hr>\n"
+"<h4>مقدمة</h4>\n"
+"<p>يتم عرض تنسيقات الطباعة على جانب الخادم باستخدام لغة قوالب Jinja. جميع النماذج لديها إمكانية الوصول إلى كائن <code>doc</code> الذي يحتوي على معلومات حول المستند الذي يتم تنسيقه. يمكنك أيضًا الوصول إلى الأدوات المساعدة الشائعة عبر وحدة <code>frappe</code>.</p>\n"
+"<p>للتنسيق، يتم توفير إطار عمل Bootstrap CSS ويمكنك الاستفادة من مجموعة الفئات الكاملة.</p>\n"
+"<hr>\n"
+"<h4>المراجع</h4>\n"
+"<ol>\n"
+"\t<li><a href=\"http://jinja.pocoo.org/docs/templates/\" target=\"_blank\">لغة قوالب Jinja</a></li>\n"
+"\t<li><a href=\"http://getbootstrap.com\" target=\"_blank\">إطار عمل Bootstrap CSS</a></li>\n"
+"</ol>\n"
+"<hr>\n"
+"<h4>مثال</h4>\n"
+"<pre><code>&lt;h3&gt;{{ doc.select_print_heading or \"فاتورة\" }}&lt;/h3&gt;\n"
+"&lt;div class=\"row\"&gt;\n"
+"\t&lt;div class=\"col-md-3 text-right\"&gt;اسم العميل&lt;/div&gt;\n"
+"\t&lt;div class=\"col-md-9\"&gt;{{ doc.customer_name }}&lt;/div&gt;\n"
+"&lt;/div&gt;\n"
+"&lt;div class=\"row\"&gt;\n"
+"\t&lt;div class=\"col-md-3 text-right\"&gt;التاريخ&lt;/div&gt;\n"
+"\t&lt;div class=\"col-md-9\"&gt;{{ doc.get_formatted(\"invoice_date\") }}&lt;/div&gt;\n"
+"&lt;/div&gt;\n"
+"&lt;table class=\"table table-bordered\"&gt;\n"
+"\t&lt;tbody&gt;\n"
+"\t\t&lt;tr&gt;\n"
+"\t\t\t&lt;th&gt;م&lt;/th&gt;\n"
+"\t\t\t&lt;th&gt;اسم السلعة&lt;/th&gt;\n"
+"\t\t\t&lt;th&gt;الوصف&lt;/th&gt;\n"
+"\t\t\t&lt;th class=\"text-right\"&gt;الكمية&lt;/th&gt;\n"
+"\t\t\t&lt;th class=\"text-right\"&gt;السعر&lt;/th&gt;\n"
+"\t\t\t&lt;th class=\"text-right\"&gt;المبلغ&lt;/th&gt;\n"
+"\t\t&lt;/tr&gt;\n"
+"\t\t{%- for row in doc.items -%}\n"
+"\t\t&lt;tr&gt;\n"
+"\t\t\t&lt;td style=\"width: 3%;\"&gt;{{ row.idx }}&lt;/td&gt;\n"
+"\t\t\t&lt;td style=\"width: 20%;\"&gt;\n"
+"\t\t\t\t{{ row.item_name }}\n"
+"\t\t\t\t{% if row.item_code != row.item_name -%}\n"
+"\t\t\t\t&lt;br&gt;رمز السلعة: {{ row.item_code}}\n"
+"\t\t\t\t{%- endif %}\n"
+"\t\t\t&lt;/td&gt;\n"
+"\t\t\t&lt;td style=\"width: 37%;\"&gt;\n"
+"\t\t\t\t&lt;div style=\"border: 0px;\"&gt;{{ row.description }}&lt;/div&gt;&lt;/td&gt;\n"
+"\t\t\t&lt;td style=\"width: 10%; text-align: right;\"&gt;{{ row.qty }} {{ row.uom or row.stock_uom }}&lt;/td&gt;\n"
+"\t\t\t&lt;td style=\"width: 15%; text-align: right;\"&gt;{{\n"
+"\t\t\t\trow.get_formatted(\"rate\", doc) }}&lt;/td&gt;\n"
+"\t\t\t&lt;td style=\"width: 15%; text-align: right;\"&gt;{{\n"
+"\t\t\t\trow.get_formatted(\"amount\", doc) }}&lt;/td&gt;\n"
+"\t\t&lt;/tr&gt;\n"
+"\t\t{%- endfor -%}\n"
+"\t&lt;/tbody&gt;\n"
+"&lt;/table&gt;</code></pre>\n"
+"<hr>\n"
+"<h4>الدوال الشائعة</h4>\n"
+"<table class=\"table table-bordered\">\n"
+"\t<tbody>\n"
+"\t\t<tr>\n"
+"\t\t\t<td style=\"width: 30%;\"><code>doc.get_formatted(\"[fieldname]\", [parent_doc])</code></td>\n"
+"\t\t\t<td>الحصول على قيمة المستند منسقة كتاريخ أو عملة وما إلى ذلك. مرر المستند الأصلي <code>doc</code> لحقول نوع العملة.</td>\n"
+"\t\t</tr>\n"
+"\t\t<tr>\n"
+"\t\t\t<td style=\"width: 30%;\"><code>frappe.db.get_value(\"[doctype]\", \"[name]\", \"fieldname\")</code></td>\n"
+"\t\t\t<td>الحصول على قيمة من مستند آخر.</td>\n"
+"\t\t</tr>\n"
+"\t</tbody>\n"
+"</table>\n"
 
 #. Description of the 'Template' (Code) field in DocType 'Address Template'
 #: frappe/contacts/doctype/address_template/address_template.json
@@ -435,7 +513,18 @@ msgid "<h4>Default Template</h4>\n"
 "{% if fax %}Fax: {{ fax }}&lt;br&gt;{% endif -%}\n"
 "{% if email_id %}Email: {{ email_id }}&lt;br&gt;{% endif -%}\n"
 "</code></pre>"
-msgstr ""
+msgstr "<h4>القالب الافتراضي</h4>\n"
+"<p>يستخدم <a href=\"http://jinja.pocoo.org/docs/templates/\">قوالب جينجا</a> وستكون جميع حقول العنوان (بما في ذلك الحقول المخصصة إن وجدت) متاحة</p>\n"
+"<pre><code>{{ address_line1 }}&lt;br&gt;\n"
+"{% if address_line2 %}{{ address_line2 }}&lt;br&gt;{% endif -%}\n"
+"{{ city }}&lt;br&gt;\n"
+"{% if state %}{{ state }}&lt;br&gt;{% endif -%}\n"
+"{% if pincode %} الرمز البريدي:  {{ pincode }}&lt;br&gt;{% endif -%}\n"
+"{{ country }}&lt;br&gt;\n"
+"{% if phone %}هاتف: {{ phone }}&lt;br&gt;{% endif -%}\n"
+"{% if fax %}فاكس: {{ fax }}&lt;br&gt;{% endif -%}\n"
+"{% if email_id %}البريد الإلكتروني: {{ email_id }}&lt;br&gt;{% endif -%}\n"
+"</code></pre>"
 
 #. Content of the 'Email Reply Help' (HTML) field in DocType 'Email Template'
 #: frappe/email/doctype/email_template/email_template.json
@@ -465,7 +554,7 @@ msgstr "<h4>مثال على الرد بالبريد الإلكتروني</h4>\n\
 #. Content of the 'html_5' (HTML) field in DocType 'Data Import'
 #: frappe/core/doctype/data_import/data_import.json
 msgid "<h5 class=\"text-muted uppercase\">Or</h5>"
-msgstr ""
+msgstr "<h5 class=\"text-muted uppercase\">أو</h5>"
 
 #. Content of the 'Message Examples' (HTML) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
@@ -483,14 +572,28 @@ msgid "<h5>Message Example</h5>\n\n"
 "&lt;li&gt;Amount: {{ doc.grand_total }}\n"
 "&lt;/ul&gt;\n"
 "</pre>"
-msgstr ""
+msgstr "<h5>مثال الرسالة</h5>\n\n"
+"<pre>&lt;h3&gt;طلب متأخر&lt;/h3&gt;\n\n"
+"&lt;p&gt;المعاملة {{ doc.name }} تجاوزت تاريخ الاستحقاق. يرجى اتخاذ الإجراء اللازم.&lt;/p&gt;\n\n"
+"&lt;!-- عرض آخر تعليق --&gt;\n"
+"{% if comments %}\n"
+"آخر تعليق: {{ comments[-1].comment }} بواسطة {{ comments[-1].by }}\n"
+"{% endif %}\n\n"
+"&lt;h4&gt;التفاصيل&lt;/h4&gt;\n\n"
+"&lt;ul&gt;\n"
+"&lt;li&gt;العميل: {{ doc.customer }}\n"
+"&lt;li&gt;المبلغ: {{ doc.grand_total }}\n"
+"&lt;/ul&gt;\n"
+"</pre>"
 
 #. Content of the 'html_condition' (HTML) field in DocType 'Webhook'
 #: frappe/integrations/doctype/webhook/webhook.json
 msgid "<p><strong>Condition Examples:</strong></p>\n"
 "<pre>doc.status==\"Open\"<br>doc.due_date==nowdate()<br>doc.total &gt; 40000\n"
 "</pre>"
-msgstr ""
+msgstr "<p><strong>أمثلة الشرط:</strong></p>\n"
+"<pre>doc.status==\"Open\"<br>doc.due_date==nowdate()<br>doc.total &gt; 40000\n"
+"</pre>"
 
 #. Content of the 'html_7' (HTML) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
@@ -504,7 +607,9 @@ msgstr ""
 msgid "<p>Multiple webforms can be created for a single doctype. Add filters specific to this webform to display correct record after submission.</p><p>For Example:</p>\n"
 "<p>If you create a separate webform every year to capture feedback from employees add a \n"
 " field named year in doctype and add a filter <b>year = 2023</b></p>\n"
-msgstr ""
+msgstr "<p>يمكن إنشاء نماذج ويب متعددة لنوع مستند واحد. أضف فلاتر خاصة بنموذج الويب هذا لعرض السجل الصحيح بعد الإرسال.</p><p>مثال:</p>\n"
+"<p>إذا قمت بإنشاء نموذج ويب منفصل كل عام لجمع ملاحظات الموظفين، أضف\n"
+" حقلاً باسم year في نوع المستند وأضف فلتر <b>year = 2023</b></p>\n"
 
 #. Description of the 'Context Script' (Code) field in DocType 'Web Page'
 #: frappe/website/doctype/web_page/web_page.json
@@ -512,7 +617,10 @@ msgid "<p>Set context before rendering a template. Example:</p><p>\n"
 "</p><div><pre><code>\n"
 "context.project = frappe.get_doc(\"Project\", frappe.form_dict.name)\n"
 "</code></pre></div>"
-msgstr ""
+msgstr "<p>قم بتعيين السياق قبل عرض القالب. مثال:</p><p>\n"
+"</p><div><pre><code>\n"
+"context.project = frappe.get_doc(\"Project\", frappe.form_dict.name)\n"
+"</code></pre></div>"
 
 #. Content of the 'JS Message' (HTML) field in DocType 'Custom HTML Block'
 #: frappe/desk/doctype/custom_html_block/custom_html_block.json
@@ -520,11 +628,14 @@ msgid "<p>To interact with above HTML you will have to use `root_element` as a p
 "let some_class_element = root_element.querySelector('.some-class');\n"
 "some_class_element.textContent = \"New content\";\n"
 "</code></pre>"
-msgstr ""
+msgstr "<p>للتفاعل مع HTML أعلاه، ستحتاج إلى استخدام `root_element` كمحدد أصل.</p><p>على سبيل المثال:</p><pre class=\"p-3 bg-gray-100 border-radius rounded-sm mb-0\" style=\"width: fit-content;\"><code>// هنا يتم توفير root_element بشكل افتراضي\n"
+"let some_class_element = root_element.querySelector('.some-class');\n"
+"some_class_element.textContent = \"New content\";\n"
+"</code></pre>"
 
 #: frappe/twofactor.py:456
 msgid "<p>Your OTP secret on {0} has been reset. If you did not perform this reset and did not request it, please contact your System Administrator immediately.</p>"
-msgstr ""
+msgstr "<p>تمت إعادة تعيين مرورك لـ OTP على {0}. إذا لم تقم بهذا الإعادة ولم تطلبها، فيرجى الاتصال بمدير النظام الخاص بك فوراً.</p>"
 
 #. Description of the 'Cron Format' (Data) field in DocType 'Scheduled Job
 #. Type'
@@ -543,7 +654,18 @@ msgid "<pre>*  *  *  *  *\n"
 "* - Any value\n"
 "/ - Step values\n"
 "</pre>\n"
-msgstr ""
+msgstr "<pre>*  *  *  *  *\n"
+"┬  ┬  ┬  ┬  ┬\n"
+"│  │  │  │  │\n"
+"│  │  │  │  └ يوم الأسبوع (0 - 6) (0 هو الأحد)\n"
+"│  │  │  └───── شهر (1 - 12)\n"
+"│  │  └────────── يوم الشهر (1 - 31)\n"
+"│  └─────────────── ساعة (0 - 23)\n"
+"└──────────────────── دقيقة (0 - 59)\n\n"
+"---\n\n"
+"* - أي قيمة\n"
+"/ - قيم الخطوة\n"
+"</pre>\n"
 
 #. Content of the 'Example' (HTML) field in DocType 'Workflow Transition'
 #: frappe/workflow/doctype/workflow_transition/workflow_transition.json
@@ -560,7 +682,19 @@ msgid "<pre><code>doc.grand_total &gt; 0</code></pre>\n\n"
 "<li>frappe.utils.now</li>\n"
 "</ul>\n"
 "<p>Example: </p><pre><code>doc.creation &gt; frappe.utils.add_to_date(frappe.utils.now_datetime(), days=-5, as_string=True, as_datetime=True) </code></pre><p></p>"
-msgstr ""
+msgstr "<pre><code>doc.grand_total &gt; 0</code></pre>\n\n"
+"<p>يجب كتابة الشروط بلغة Python بسيطة. يرجى استخدام الخصائص المتاحة في النموذج فقط.</p>\n"
+"<p>الدوال المسموح بها:\n"
+"</p><ul>\n"
+"<li>frappe.db.get_value</li>\n"
+"<li>frappe.db.get_list</li>\n"
+"<li>frappe.session</li>\n"
+"<li>frappe.utils.now_datetime</li>\n"
+"<li>frappe.utils.get_datetime</li>\n"
+"<li>frappe.utils.add_to_date</li>\n"
+"<li>frappe.utils.now</li>\n"
+"</ul>\n"
+"<p>مثال: </p><pre><code>doc.creation &gt; frappe.utils.add_to_date(frappe.utils.now_datetime(), days=-5, as_string=True, as_datetime=True) </code></pre><p></p>"
 
 #. Header text in the Welcome Workspace Workspace
 #: frappe/core/workspace/welcome_workspace/welcome_workspace.json
@@ -605,7 +739,7 @@ msgstr ""
 
 #: frappe/custom/doctype/custom_field/custom_field.js:39
 msgid "<strong>Warning:</strong> This field is system generated and may be overwritten by a future update. Modify it using {0} instead."
-msgstr ""
+msgstr "<strong>تحذ搉ير</strong>: هذا الحقل منطم من قبل النظام وقد يتم تجاوزه من قبل تحديث مستقبلي. قم بتحويره باستخدام {0} بدلا من ذلك."
 
 #. Option for the 'Condition' (Select) field in DocType 'Document Naming Rule
 #. Condition'
@@ -3712,7 +3846,8 @@ msgstr "شعار العلامة التجارية"
 #: frappe/website/doctype/website_settings/website_settings.json
 msgid "Brand is what appears on the top-left of the toolbar. If it is an image, make sure it\n"
 "has a transparent background and use the &lt;img /&gt; tag. Keep size as 200px x 30px"
-msgstr ""
+msgstr "العلامة التجارية هي ما يظهر في أعلى يسار شريط الأدوات. إذا كانت صورة، تأكد من أنها\n"
+"تحتوي على خلفية شفافة واستخدم وسم &lt;img /&gt;. حافظ على الحجم 200px × 30px"
 
 #. Label of a Code field in DocType 'Web Form'
 #. Label of a Code field in DocType 'Web Page'
@@ -4193,7 +4328,7 @@ msgstr "لا يمكن الوصول إلى مسار الملف {0}"
 
 #: frappe/public/js/workflow_builder/utils.js:183
 msgid "Cannot cancel before submitting while transitioning from <b>{0} State</b> to <b>{1} State</b>"
-msgstr ""
+msgstr "لا يمكن الإلغاء قبل التقديم أثناء الانتقال من <b>حالة {0}</b> إلى <b>حالة {1}</b>"
 
 #: frappe/workflow/doctype/workflow/workflow.py:109
 msgid "Cannot cancel before submitting. See Transition {0}"
@@ -4213,7 +4348,7 @@ msgstr "لا يمكن تغيير حالة المستند من 1 (تم الإرس
 
 #: frappe/public/js/workflow_builder/utils.js:170
 msgid "Cannot change state of Cancelled Document <b>({0} State)</b>"
-msgstr ""
+msgstr "لا يمكن تغيير حالة المستند الملغى <b>(حالة {0})</b>"
 
 #: frappe/workflow/doctype/workflow/workflow.py:98
 msgid "Cannot change state of Cancelled Document. Transition row {0}"
@@ -4257,7 +4392,7 @@ msgstr "لا يمكن حذف حالة المستند القياسي."
 
 #: frappe/custom/doctype/customize_form/customize_form.js:321
 msgid "Cannot delete standard field <strong>{0}</strong>. You can hide it instead."
-msgstr ""
+msgstr "لا يمكن حذف الحقل الأساسي <strong>{0}</strong>. يمكنك إخفاؤه بدلاً من ذلك."
 
 #: frappe/public/js/form_builder/components/Field.vue:38
 #: frappe/public/js/form_builder/components/Section.vue:117
@@ -4272,7 +4407,7 @@ msgstr "لا يمكن حذف الارتباط القياسي. يمكنك إخف�
 
 #: frappe/custom/doctype/customize_form/customize_form.js:313
 msgid "Cannot delete system generated field <strong>{0}</strong>. You can hide it instead."
-msgstr ""
+msgstr "لا يمكن حذف الحقل الذي تم إنشاؤه بواسطة النظام <strong>{0}</strong>. يمكنك إخفاؤه بدلاً من ذلك."
 
 #: frappe/public/js/frappe/list/bulk_operations.js:215
 msgid "Cannot delete {0}"
@@ -5410,7 +5545,9 @@ msgstr "قم بتهيئة الأعمدة لـ {0}"
 msgid "Configure how amended documents will be named.<br>\n\n"
 "Default behaviour is to follow an amend counter which adds a number to the end of the original name indicating the amended version. <br>\n\n"
 "Default Naming will make the amended document to behave same as new documents."
-msgstr ""
+msgstr "قم بتكوين كيفية تسمية المستندات المعدلة.<br>\n\n"
+"السلوك الافتراضي هو اتباع عداد التعديل الذي يضيف رقمًا في نهاية الاسم الأصلي يشير إلى النسخة المعدلة. <br>\n\n"
+"التسمية الافتراضية ستجعل المستند المعدل يتصرف بنفس طريقة المستندات الجديدة."
 
 #. Description of a DocType
 #: frappe/core/doctype/document_naming_settings/document_naming_settings.json
@@ -5465,7 +5602,7 @@ msgstr "مؤكد"
 
 #: frappe/public/js/frappe/widgets/onboarding_widget.js:530
 msgid "Congratulations on completing the module setup. If you want to learn more you can refer to the documentation <a target=\"_blank\" href=\"{0}\">here</a>."
-msgstr ""
+msgstr "تهانينا على إكمال إعداد الوحدة. إذا كنت ترغب في معرفة المزيد، يمكنك الرجوع إلى الوثائق <a target=\"_blank\" href=\"{0}\">هنا</a>."
 
 #: frappe/integrations/doctype/connected_app/connected_app.js:20
 msgid "Connect to {}"
@@ -7622,7 +7759,10 @@ msgid "DocStatus of the following states have changed:<br><strong>{0}</strong><b
 "\t\t\t\tDo you want to update the docstatus of existing documents in those states?<br>\n"
 "\t\t\t\tThis does not undo any effect bought in by the document's existing docstatus.\n"
 "\t\t\t\t"
-msgstr ""
+msgstr "تم تغيير حالة المستند (DocStatus) للحالات التالية:<br><strong>{0}</strong><br>\n"
+"\t\t\t\tهل تريد تحديث حالة المستند (docstatus) للمستندات الموجودة في تلك الحالات؟<br>\n"
+"\t\t\t\tهذا لا يلغي أي تأثير ناتج عن حالة المستند (docstatus) الحالية.\n"
+"\t\t\t\t"
 
 #. Label of a Link field in DocType 'Amended Document Naming Settings'
 #. Label of a Link field in DocType 'Audit Trail'
@@ -10763,7 +10903,7 @@ msgstr "قيم قالب التذييل"
 
 #: frappe/printing/page/print/print.js:116
 msgid "Footer might not be visible as {0} option is disabled</div>"
-msgstr ""
+msgstr "قد لا يكون تذييل الصفحة مرئيًا لأن خيار {0} معطل</div>"
 
 #. Description of the 'Footer HTML' (HTML Editor) field in DocType 'Letter
 #. Head'
@@ -11660,7 +11800,7 @@ msgstr "قم بتجميع أنواع المستندات المخصصة الخا�
 
 #: frappe/public/js/frappe/ui/group_by/group_by.js:428
 msgid "Grouped by <span style='font-weight:600;'>{0}</b>"
-msgstr ""
+msgstr "مجمّع حسب <span style='font-weight:600;'>{0}</b>"
 
 #. Option for the 'Method' (Select) field in DocType 'Recorder'
 #: frappe/core/doctype/recorder/recorder.json
@@ -12085,7 +12225,7 @@ msgstr ""
 #. Permission'
 #: frappe/core/doctype/user_permission/user_permission.json
 msgid "Hide descendant records of <b>For Value</b>."
-msgstr ""
+msgstr "إخفاء السجلات الفرعية لـ <b>للقيمة</b>."
 
 #: frappe/public/js/frappe/form/layout.js:285
 msgid "Hide details"
@@ -13500,7 +13640,7 @@ msgstr "سلسلة تسمية غير صالحة {}: النقطة (.) مفقود�
 
 #: frappe/model/naming.py:69
 msgid "Invalid naming series {}: dot (.) missing before the numeric placeholders. Kindly use a format like <b>ABCD.#####</b>."
-msgstr ""
+msgstr "سلسلة تسمية غير صالحة {}: النقطة (.) مفقودة قبل العناصر النائبة الرقمية. يرجى استخدام تنسيق مثل <b>ABCD.#####</b>."
 
 #: frappe/core/doctype/data_import/importer.py:446
 msgid "Invalid or corrupted content for import"
@@ -16408,7 +16548,7 @@ msgstr "MYISAM"
 
 #: frappe/workflow/doctype/workflow/workflow.js:19
 msgid "NOTE: If you add states or transitions in the table, it will be reflected in the Workflow Builder but you will have to position them manually. Also Workflow Builder is currently in <b>BETA</b>."
-msgstr ""
+msgstr "ملاحظة: إذا قمت بإضافة حالات أو تحولات في الجدول، فسيتم عكسها في منشئ سير العمل ولكن سيتعين عليك تحديد موضعها يدويًا. كما أن منشئ سير العمل حاليًا في مرحلة <b>تجريبي</b>."
 
 #. Description of the 'LDAP Group Field' (Data) field in DocType 'LDAP
 #. Settings'
@@ -16482,7 +16622,9 @@ msgstr ""
 msgid "Naming Options:\n"
 "<ol><li><b>field:[fieldname]</b> - By Field</li><li><b>naming_series:</b> - By Naming Series (field called naming_series must be present)</li><li><b>Prompt</b> - Prompt user for a name</li><li><b>[series]</b> - Series by prefix (separated by a dot); for example PRE.#####</li>\n"
 "<li><b>format:EXAMPLE-{MM}morewords{fieldname1}-{fieldname2}-{#####}</b> - Replace all braced words (fieldnames, date words (DD, MM, YY), series) with their value. Outside braces, any characters can be used.</li></ol>"
-msgstr ""
+msgstr "خيارات التسمية:\n"
+"<ol><li><b>field:[اسم الحقل]</b> - حسب الحقل</li><li><b>naming_series:</b> - حسب Naming Series (يجب وجود حقل باسم naming_series)</li><li><b>Prompt</b> - مطالبة المستخدم بإدخال اسم</li><li><b>[سلسلة]</b> - سلسلة حسب البادئة (مفصولة بنقطة)؛ على سبيل المثال PRE.#####</li>\n"
+"<li><b>format:EXAMPLE-{MM}morewords{fieldname1}-{fieldname2}-{#####}</b> - استبدال جميع الكلمات بين الأقواس (أسماء الحقول، كلمات التاريخ (DD، MM، YY)، السلاسل) بقيمها. خارج الأقواس، يمكن استخدام أي أحرف.</li></ol>"
 
 #. Label of a Select field in DocType 'DocType'
 #. Label of a Select field in DocType 'Customize Form'
@@ -17275,7 +17417,7 @@ msgstr "لم يتم العثور على نموذج في المسار: {0}"
 
 #: frappe/core/page/permission_manager/permission_manager.js:357
 msgid "No user has the role <strong>{0}</strong>"
-msgstr ""
+msgstr "لا يوجد مستعمل لديه الدور <strong>{0}</strong>"
 
 #: frappe/public/js/frappe/form/controls/multiselect_list.js:257
 msgid "No values to show"
@@ -17870,7 +18012,7 @@ msgstr "نموذج رسالة نصية قصيرة لرمز التحقق لمرة
 
 #: frappe/core/doctype/system_settings/system_settings.py:163
 msgid "OTP SMS Template must contain <code>{0}</code> placeholder to insert the OTP."
-msgstr ""
+msgstr "يجب أن يحتوي نموذج رسالة OTP النصية على العنصر النائب <code>{0}</code> لإدراج رمز OTP."
 
 #: frappe/twofactor.py:455
 msgid "OTP Secret Reset - {0}"
@@ -17884,7 +18026,7 @@ msgstr "تمت إعادة تعيين سر مكتب المدعي العام. سو
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP placeholder should be defined as <code>{{ otp }}</code> "
-msgstr ""
+msgstr "يجب تعريف عنصر OTP النائب كـ <code>{{ otp }}</code> "
 
 #: frappe/templates/includes/login/login.js:363
 msgid "OTP setup using OTP App was not completed. Please contact Administrator."
@@ -19391,7 +19533,7 @@ msgstr "الرجاء إدخال كلمة المرور"
 #: frappe/public/js/frappe/desk.js:202
 msgctxt "Email Account"
 msgid "Please enter the password for: <b>{0}</b>"
-msgstr ""
+msgstr "يرجى إدخال كلمة المرور لـ: <b>{0}</b>"
 
 #: frappe/core/doctype/sms_settings/sms_settings.py:42
 msgid "Please enter valid mobile nos"
@@ -20285,7 +20427,7 @@ msgstr "ملف محمي"
 #. 'System Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "Provide a list of allowed file extensions for file uploads. Each line should contain one allowed file type. If unset, all file extensions are allowed. Example: <br>CSV<br>JPG<br>PNG"
-msgstr ""
+msgstr "قدم قائمة بامتدادات الملفات المسموح بها لرفع الملفات. يجب أن يحتوي كل سطر على نوع ملف واحد مسموح به. إذا لم يتم التعيين، فسيتم السماح بجميع امتدادات الملفات. مثال: <br>CSV<br>JPG<br>PNG"
 
 #. Label of a Data field in DocType 'User Social Login'
 #: frappe/core/doctype/user_social_login/user_social_login.json
@@ -20945,7 +21087,7 @@ msgstr "إعادة التوجيه إلى المسار"
 #. Label of a Data field in DocType 'Connected App'
 #: frappe/integrations/doctype/connected_app/connected_app.json
 msgid "Redirect URI"
-msgstr "عنوان إعادة التوجيه"
+msgstr "إعادة توجيه URI"
 
 #. Label of a Data field in DocType 'OAuth Authorization Code'
 #: frappe/integrations/doctype/oauth_authorization_code/oauth_authorization_code.json
@@ -21266,7 +21408,7 @@ msgstr "إعدادات المرحل"
 #. Group in Package's connections
 #: frappe/core/doctype/package/package.json
 msgid "Release"
-msgstr "يطلق"
+msgstr "يحرر"
 
 #. Label of a Markdown Editor field in DocType 'Package Release'
 #: frappe/core/doctype/package_release/package_release.json
@@ -21747,7 +21889,7 @@ msgstr "رؤوس الطلب"
 #. Label of a Data field in DocType 'Integration Request'
 #: frappe/integrations/doctype/integration_request/integration_request.json
 msgid "Request ID"
-msgstr "رقم الطلب"
+msgstr "طلب معرف"
 
 #. Label of a Int field in DocType 'Server Script'
 #: frappe/core/doctype/server_script/server_script.json
@@ -23977,7 +24119,24 @@ msgid "Set the filters here. For example:\n"
 "\treqd: 1\n"
 "}]\n"
 "</code></pre>"
-msgstr ""
+msgstr "قم بتعيين الفلاتر هنا. على سبيل المثال:\n"
+"<pre class=\"small text-muted\"><code>\n"
+"[{\n"
+"\tfieldname: \"company\",\n"
+"\tlabel: __(\"Company\"),\n"
+"\tfieldtype: \"Link\",\n"
+"\toptions: \"Company\",\n"
+"\tdefault: frappe.defaults.get_user_default(\"Company\"),\n"
+"\treqd: 1\n"
+"},\n"
+"{\n"
+"\tfieldname: \"account\",\n"
+"\tlabel: __(\"Account\"),\n"
+"\tfieldtype: \"Link\",\n"
+"\toptions: \"Account\",\n"
+"\treqd: 1\n"
+"}]\n"
+"</code></pre>"
 
 #. Description of the 'Method' (Data) field in DocType 'Number Card'
 #: frappe/desk/doctype/number_card/number_card.json
@@ -23989,7 +24148,14 @@ msgid "Set the path to a whitelisted function that will return the data for the 
 "\t\"route_options\": {\"from_date\": \"2023-05-23\"},\n"
 "\t\"route\": [\"query-report\", \"Permitted Documents For User\"]\n"
 "}</code></pre>"
-msgstr ""
+msgstr "قم بتعيين المسار إلى دالة مدرجة في القائمة البيضاء ستُرجع البيانات لبطاقة الأرقام بالتنسيق التالي:\n\n"
+"<pre class=\"small text-muted\"><code>\n"
+"{\n"
+"\t\"value\": value,\n"
+"\t\"fieldtype\": \"Currency\",\n"
+"\t\"route_options\": {\"from_date\": \"2023-05-23\"},\n"
+"\t\"route\": [\"query-report\", \"Permitted Documents For User\"]\n"
+"}</code></pre>"
 
 #: frappe/contacts/doctype/address_template/address_template.py:33
 msgid "Setting this Address Template as default as there is no other default"
@@ -24593,7 +24759,7 @@ msgstr "تخطي الخطوة"
 #. Label of a Check field in DocType 'Patch Log'
 #: frappe/core/doctype/patch_log/patch_log.json
 msgid "Skipped"
-msgstr "تم التخطي"
+msgstr "تم تخطيه"
 
 #: frappe/core/doctype/data_import/importer.py:913
 msgid "Skipping Duplicate Column {0}"
@@ -25068,7 +25234,7 @@ msgstr "ثابت معلمات"
 #. Label of a Section Break field in DocType 'RQ Worker'
 #: frappe/core/doctype/rq_worker/rq_worker.json
 msgid "Statistics"
-msgstr "إحصائيات"
+msgstr "الإحصائيات"
 
 #. Label of a Section Break field in DocType 'Number Card'
 #: frappe/desk/doctype/number_card/number_card.json
@@ -25402,7 +25568,7 @@ msgstr "الوثيقة المسجلة لا يمكن تحويلها إلى مسو
 
 #: frappe/public/js/workflow_builder/utils.js:176
 msgid "Submitted document cannot be converted back to draft while transitioning from <b>{0} State</b> to <b>{1} State</b>"
-msgstr ""
+msgstr "لا يمكن تحويل المستند المُقدَّم مرة أخرى إلى مشروع أثناء الانتقال من <b>حالة {0}</b> إلى <b>حالة {1}</b>"
 
 #: frappe/public/js/frappe/form/save.js:10
 msgctxt "Freeze message while submitting a document"
@@ -26198,7 +26364,9 @@ msgstr "تنسيق كسف حساس لحالة الأحرف"
 msgid "The Client ID obtained from the Google Cloud Console under <a href=\"https://console.cloud.google.com/apis/credentials\">\n"
 "\"APIs &amp; Services\" &gt; \"Credentials\"\n"
 "</a>"
-msgstr ""
+msgstr "معرف العميل الذي تم الحصول عليه من Google Cloud Console ضمن <a href=\"https://console.cloud.google.com/apis/credentials\">\n"
+"\"APIs &amp; Services\" &gt; \"Credentials\"\n"
+"</a>"
 
 #: frappe/email/doctype/notification/notification.py:136
 msgid "The Condition '{0}' is invalid"
@@ -26239,7 +26407,9 @@ msgstr "لا يمكن ربط المرفقات بشكل صحيح مع المست�
 msgid "The browser API key obtained from the Google Cloud Console under <a href=\"https://console.cloud.google.com/apis/credentials\">\n"
 "\"APIs &amp; Services\" &gt; \"Credentials\"\n"
 "</a>"
-msgstr ""
+msgstr "مفتاح API للمتصفح الذي تم الحصول عليه من Google Cloud Console ضمن <a href=\"https://console.cloud.google.com/apis/credentials\">\n"
+"\"APIs &amp; Services\" &gt; \"Credentials\"\n"
+"</a>"
 
 #: frappe/database/database.py:430
 msgid "The changes have been reverted."
@@ -26362,11 +26532,13 @@ msgstr "بدأت عملية حذف البيانات {0} المرتبطة {1}."
 msgid "The project number obtained from Google Cloud Console under <a href=\"https://console.cloud.google.com/iam-admin/settings\">\n"
 "\"IAM &amp; Admin\" &gt; \"Settings\"\n"
 "</a>"
-msgstr ""
+msgstr "رقم المشروع الذي تم الحصول عليه من Google Cloud Console ضمن <a href=\"https://console.cloud.google.com/iam-admin/settings\">\n"
+"\"IAM &amp; Admin\" &gt; \"Settings\"\n"
+"</a>"
 
 #: frappe/desk/utils.py:88
 msgid "The report you requested has been generated.<br><br>Click here to download:<br><a href='{0}'>{0}</a><br><br>This link will expire in {1} hours."
-msgstr ""
+msgstr "تم إنشاء التقرير الذي طلبته.<br><br>انقر هنا للتحميل:<br><a href='{0}'>{0}</a><br><br>ستنتهي صلاحية هذا الرابط خلال {1} ساعة."
 
 #: frappe/core/doctype/user/user.py:947
 msgid "The reset password link has been expired"
@@ -26674,7 +26846,7 @@ msgstr "تم إرجاع هذا المستند"
 
 #: frappe/public/js/frappe/form/form.js:1228
 msgid "This document has unsaved changes which might not appear in final PDF. <br> Consider saving the document before printing."
-msgstr ""
+msgstr "يحتوي هذا المستند على تغييرات غير محفوظة قد لا تظهر في ملف PDF النهائي. <br> يُرجى حفظ المستند قبل الطباعة."
 
 #: frappe/public/js/frappe/form/form.js:1025
 msgid "This document is already amended, you cannot ammend it again"
@@ -27172,7 +27344,8 @@ msgstr "إلى المستخدم"
 #: frappe/automation/doctype/auto_repeat/auto_repeat.json
 msgid "To add dynamic subject, use jinja tags like\n\n"
 "<div><pre><code>New {{ doc.doctype }} #{{ doc.name }}</code></pre></div>"
-msgstr ""
+msgstr "لإضافة موضوع ديناميكي، استخدم وسوم جينجا مثل\n\n"
+"<div><pre><code>جديد {{ doc.doctype }} #{{ doc.name }}</code></pre></div>"
 
 #. Description of the 'Subject' (Data) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
@@ -27187,7 +27360,11 @@ msgid "To add dynamic values from the document, use jinja tags like\n\n"
 "<pre><code>{ \"id\": \"{{ doc.name }}\" }</code>\n"
 "</pre>\n"
 "</div>"
-msgstr ""
+msgstr "لإضافة قيم ديناميكية من المستند، استخدم علامات jinja مثل\n\n"
+"<div>\n"
+"<pre><code>{ \"id\": \"{{ doc.name }}\" }</code>\n"
+"</pre>\n"
+"</div>"
 
 #: frappe/email/doctype/auto_email_report/auto_email_report.py:107
 msgid "To allow more reports update limit in System Settings."
@@ -27231,7 +27408,7 @@ msgstr ""
 #. Description of the 'Console' (Code) field in DocType 'System Console'
 #: frappe/desk/doctype/system_console/system_console.json
 msgid "To print output use <code>print(text)</code>"
-msgstr ""
+msgstr "لطباعة الناتج استخدم <code>print(text)</code>"
 
 #: frappe/core/doctype/user_type/user_type.py:292
 msgid "To set the role {0} in the user {1}, kindly set the {2} field as {3} in one of the {4} record."
@@ -27560,7 +27737,9 @@ msgstr "طرق العرض المسار"
 msgid "Track if your email has been opened by the recipient.\n"
 "<br>\n"
 "Note: If you're sending to multiple recipients, even if 1 recipient reads the email, it'll be considered \"Opened\""
-msgstr ""
+msgstr "تتبع ما إذا تم فتح بريدك الإلكتروني من قبل المستلم.\n"
+"<br>\n"
+"ملاحظة: إذا كنت ترسل إلى عدة مستلمين، حتى لو قرأ مستلم واحد البريد الإلكتروني، فسيُعتبر \"مفتوح\""
 
 #. Description of a DocType
 #: frappe/automation/doctype/milestone_tracker/milestone_tracker.json
@@ -27700,7 +27879,7 @@ msgstr "طاولة التشذيب"
 
 #: frappe/public/js/frappe/widgets/onboarding_widget.js:323
 msgid "Try Again"
-msgstr "حاول ثانية"
+msgstr "حاول مرة أخرى"
 
 #. Label of a Data field in DocType 'Document Naming Settings'
 #: frappe/core/doctype/document_naming_settings/document_naming_settings.json
@@ -27844,7 +28023,8 @@ msgstr "غير مرئي"
 #: frappe/integrations/doctype/oauth_client/oauth_client.json
 msgid "URIs for receiving authorization code once the user allows access, as well as failure responses. Typically a REST endpoint exposed by the Client App.\n"
 "<br>e.g. http://hostname/api/method/frappe.integrations.oauth2_logins.login_via_facebook"
-msgstr ""
+msgstr "عناوين URI لاستقبال رمز الترخيص بمجرد سماح المستخدم بالوصول، وكذلك استجابات الفشل. عادةً ما تكون نقطة نهاية REST يوفرها تطبيق العميل.\n"
+"<br>مثال: http://hostname/api/method/frappe.integrations.oauth2_logins.login_via_facebook"
 
 #. Option for the 'Type' (Select) field in DocType 'Workspace Shortcut'
 #. Label of a Data field in DocType 'Workspace Shortcut'
@@ -29114,7 +29294,7 @@ msgstr "المشاهدات"
 #. Label of a Check field in DocType 'DocField'
 #: frappe/core/doctype/docfield/docfield.json
 msgid "Virtual"
-msgstr "افتراضي"
+msgstr "إفتراضي"
 
 #: frappe/model/virtual_doctype.py:76
 msgid "Virtual DocType {} requires a static method called {} found {}"
@@ -29812,7 +29992,7 @@ msgstr "مساحة العمل"
 
 #: frappe/public/js/frappe/router.js:196
 msgid "Workspace <b>{0}</b> does not exist"
-msgstr ""
+msgstr "مساحة العمل <b>{0}</b> غير موجودة"
 
 #. Name of a DocType
 #: frappe/desk/doctype/workspace_chart/workspace_chart.json
@@ -31268,7 +31448,7 @@ msgstr "الآن فقط"
 
 #: frappe/desk/desktop.py:259 frappe/desk/query_report.py:290
 msgid "label"
-msgstr "ملصق"
+msgstr "الاسم"
 
 #. Option for the 'Icon' (Select) field in DocType 'Workflow State'
 #: frappe/workflow/doctype/workflow_state/workflow_state.json
@@ -32158,7 +32338,7 @@ msgstr "تمت إضافة صف واحد إلى {1}{0}"
 
 #: frappe/public/js/frappe/form/footer/version_timeline_content_builder.js:251
 msgid "{0} added {1} rows to {2}"
-msgstr ""
+msgstr "أضاف {0} {1} صفوف إلى {2}"
 
 #: frappe/public/js/frappe/form/controls/data.js:215
 msgid "{0} already exists. Select another name"
@@ -32792,7 +32972,7 @@ msgstr "قبل {0} أسبوع /أسابيع"
 
 #: frappe/core/page/permission_manager/permission_manager.js:373
 msgid "{0} with the role <strong>{1}</strong>"
-msgstr ""
+msgstr "{0} بالدور <strong>{1}</strong>"
 
 #: frappe/public/js/frappe/utils/pretty_date.js:39
 msgid "{0} y"
@@ -32957,7 +33137,7 @@ msgstr "{0}: لا يمكن فهرسة Fieldtype {1} لـ {2}"
 
 #: frappe/public/js/frappe/utils/datatable.js:12
 msgid "{count} cell copied"
-msgstr "تم نسخ الخلية {count}"
+msgstr "[صفر] خلية منسوخة"
 
 #: frappe/public/js/frappe/utils/datatable.js:13
 msgid "{count} cells copied"
@@ -32990,7 +33170,7 @@ msgstr "{} كود بايثون غير صالح في السطر {}"
 
 #: frappe/utils/data.py:2285
 msgid "{} Possibly invalid python code. <br>{}"
-msgstr ""
+msgstr "{} ربما رمز Python غير صالح. <br>{}"
 
 #. Count format of shortcut in the Website Workspace
 #: frappe/website/workspace/website/website.json
@@ -32999,7 +33179,7 @@ msgstr ""
 
 #: frappe/core/doctype/log_settings/log_settings.py:54
 msgid "{} does not support automated log clearing."
-msgstr "لا يدعم {} مسح السجلات تلقائيًا."
+msgstr "{} لا يدعم المسح التلقائي للسجلات."
 
 #: frappe/core/doctype/audit_trail/audit_trail.py:32
 #: frappe/core/doctype/audit_trail/audit_trail.py:36

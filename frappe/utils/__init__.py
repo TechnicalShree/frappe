@@ -289,10 +289,11 @@ def is_valid_iban(iban: str) -> bool:
 
 def random_string(length: int) -> str:
 	"""generate a random string"""
+	import secrets
 	import string
-	from random import choice
 
-	return "".join(choice(string.ascii_letters + string.digits) for i in range(length))
+	alphabet = string.ascii_letters + string.digits
+	return "".join(secrets.choice(alphabet) for i in range(length))
 
 
 def has_gravatar(email: str) -> str:
@@ -948,16 +949,15 @@ def gzip_decompress(data):
 
 def get_safe_filters(filters):
 	try:
-		filters = json.loads(filters)
-
-		if isinstance(filters, int | float):
-			filters = frappe.as_unicode(filters)
-
+		parsed = json.loads(filters)
 	except (TypeError, ValueError):
 		# filters are not passed, not json
-		pass
-
-	return filters
+		return filters
+	# numeric JSON is ambiguous: docnames like "3E002" parse as floats and
+	# would be corrupted by stringifying back, so keep the original string
+	if isinstance(parsed, int | float) and not isinstance(parsed, bool):
+		return filters
+	return parsed
 
 
 def create_batch(iterable: Iterable, size: int) -> Generator[Iterable, None, None]:

@@ -26,7 +26,7 @@ if TYPE_CHECKING:
 
 def make_home_folder() -> None:
 	home = frappe.get_doc(
-		{"doctype": "File", "is_folder": 1, "is_home_folder": 1, "file_name": _("Home")}
+		{"doctype": "File", "is_folder": 1, "is_home_folder": 1, "file_name": "Home"}
 	).insert(ignore_if_duplicate=True)
 
 	frappe.get_doc(
@@ -35,7 +35,7 @@ def make_home_folder() -> None:
 			"folder": home.name,
 			"is_folder": 1,
 			"is_attachments_folder": 1,
-			"file_name": _("Attachments"),
+			"file_name": "Attachments",
 		}
 	).insert(ignore_if_duplicate=True)
 
@@ -441,3 +441,20 @@ def find_file_by_url(path: str, name: str | None = None) -> Optional["File"]:
 		file: File = frappe.get_doc(doctype="File", **file_data)
 		if file.is_downloadable():
 			return file
+
+
+def get_safe_file_name(file_name: str) -> str:
+	return re.sub(r"[/\\%?#]", "_", file_name)
+
+
+def check_path_safety(base_path: str, requested_path: str) -> bool:
+	"""Util to check path safety by ensuring sandboxing and logging unsuccessful attempts"""
+	base_path = os.path.realpath(base_path)
+	requested_path = os.path.realpath(requested_path)
+	if os.path.commonpath([base_path, requested_path]) != base_path:
+		frappe.log_error(
+			title="Attempted Unauthorized File Access",
+			message=f"Blocked access to: {requested_path}",
+		)
+		return False
+	return True

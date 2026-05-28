@@ -422,6 +422,9 @@ class Database:
 
 		if query.lstrip()[:6].lower() in ("update", "insert", "delete"):
 			self.transaction_writes += 1
+			if frappe.conf.get("max_writes_per_transaction"):
+				self.MAX_WRITES_PER_TRANSACTION = cint(frappe.conf.max_writes_per_transaction)
+
 			if self.transaction_writes > self.MAX_WRITES_PER_TRANSACTION:
 				if self.auto_commit_on_many_writes:
 					self.commit()

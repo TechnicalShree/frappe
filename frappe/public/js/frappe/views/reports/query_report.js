@@ -813,7 +813,14 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 			Edit: {
 				label: __("Edit"),
 				click: () => {
-					frappe.set_route(frappe.get_route());
+					this.prepared_report_name = null;
+					Object.values(this.filters).forEach((field) => {
+						if (field.input) {
+							field.df.read_only = false;
+							field.refresh();
+						}
+					});
+					this.add_prepared_report_buttons(this.prepared_report_document);
 				},
 			},
 			Rebuild: {
@@ -1425,6 +1432,8 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 
 		const custom_format = await this.get_custom_format(print_settings);
 
+		await this.render_report_letterhead(print_settings);
+
 		this.make_access_log("Print", "PDF");
 
 		frappe.render_grid({
@@ -1449,10 +1458,11 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 
 		const custom_format = await this.get_custom_format(print_settings);
 
+		await this.render_report_letterhead(print_settings);
+
 		const columns = this.get_columns_for_print(print_settings, custom_format);
 		const data = this.get_data_for_print();
 		const applied_filters = this.get_filter_values();
-
 		const filters_html = this.get_filters_html_for_print();
 		const template = this.get_print_template(print_settings, custom_format);
 		const content = frappe.render_template(template, {
@@ -1499,8 +1509,10 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 	async get_custom_format(print_settings) {
 		let custom_format = this.report_settings.html_format || null;
 
-		if (print_settings.print_format) {
-			custom_format = await this.get_report_print_format(print_settings.print_format);
+		const print_format = print_settings.print_format || print_settings.report;
+
+		if (print_format) {
+			custom_format = await this.get_report_print_format(print_format);
 		} else if (
 			!print_settings.columns?.length &&
 			typeof this.report_settings.get_pdf_format === "function"
@@ -1528,6 +1540,30 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 		} else {
 			frappe.msgprint(__("Print Format not found"));
 			return null;
+		}
+	}
+
+	async render_report_letterhead(print_settings) {
+		if (!print_settings.with_letter_head || !print_settings.letter_head_name) return;
+
+		const filters = this.get_filter_values ? this.get_filter_values() : {};
+		const doc_context = Object.assign({}, filters);
+
+		if (!doc_context.company) {
+			doc_context.company = frappe.defaults.get_default("company");
+		}
+
+		try {
+			const r = await frappe.call("frappe.utils.print_format.render_letterhead_for_print", {
+				letterhead: print_settings.letter_head_name,
+				doc: doc_context,
+			});
+			if (r.message) {
+				print_settings.letter_head = r.message;
+			}
+		} catch (e) {
+			// fall back silently if rendering fails
+			console.warn("[Query Report] Letterhead render failed", e);
 		}
 	}
 

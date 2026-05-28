@@ -548,13 +548,13 @@ frappe.ui.form.MultiSelectDialog = class MultiSelectDialog {
 		if ($.isArray(this.setters)) {
 			for (let df of this.setters) {
 				filters[df.fieldname] =
-					me.dialog.fields_dict[df.fieldname].get_value() || undefined;
+					me.dialog.fields_dict[df.fieldname].get_value() || df.default || undefined;
 				me.args[df.fieldname] = filters[df.fieldname];
 				filter_fields.push(df.fieldname);
 			}
 		} else {
 			Object.keys(this.setters).forEach(function (setter) {
-				var value = me.dialog.fields_dict[setter].get_value();
+				var value = me.dialog.fields_dict[setter].get_value() || me.setters[setter];
 				if (me.dialog.fields_dict[setter].df.fieldtype == "Data" && value) {
 					filters[setter] = ["like", "%" + value + "%"];
 				} else {

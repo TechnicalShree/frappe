@@ -576,6 +576,9 @@ class Document(BaseDocument):
 
 	def update_single(self, d):
 		"""Updates values for Single type Document in `tabSingles`."""
+		if self.meta.is_virtual:
+			return
+
 		frappe.db.delete("Singles", {"doctype": self.doctype})
 		for field, value in d.items():
 			if field != "doctype":
@@ -1419,7 +1422,7 @@ class Document(BaseDocument):
 				_("Table {0} cannot be empty").format(label), raise_exception or frappe.EmptyTableError
 			)
 
-	def round_floats_in(self, doc, fieldnames=None):
+	def round_floats_in(self, doc, fieldnames=None, do_not_round_fields=None):
 		"""Round floats for all `Currency`, `Float`, `Percent` fields for the given doc.
 
 		:param doc: Document whose numeric properties are to be rounded.
@@ -1433,6 +1436,9 @@ class Document(BaseDocument):
 		# PERF: flt internally has to resolve this if we don't specify it.
 		rounding_method = frappe.get_system_settings("rounding_method")
 		for fieldname in fieldnames:
+			if do_not_round_fields and fieldname in do_not_round_fields:
+				continue
+
 			doc.set(
 				fieldname,
 				flt(

@@ -74,7 +74,7 @@ def execute_cmd(cmd, from_async=False):
 	try:
 		method = get_attr(cmd)
 	except Exception as e:
-		frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, e))
+		frappe.throw(_("Failed to get method for command {0} with {1}").format(cmd, str(e)))
 
 	if from_async:
 		method = method.queue
@@ -98,6 +98,10 @@ def run_server_script(server_script):
 
 def is_valid_http_method(method):
 	if frappe.flags.in_safe_exec:
+		return
+
+	# Skip HTTP method validation when running in a background job
+	if hasattr(frappe.local, "job"):
 		return
 
 	http_method = frappe.local.request.method

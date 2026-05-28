@@ -51,7 +51,7 @@ from .utils.jinja import (
 )
 from .utils.lazy_loader import lazy_import
 
-__version__ = "15.101.5"
+__version__ = "15.109.0"
 __title__ = "Frappe Framework"
 
 # This if block is never executed when running the code. It is only used for
@@ -105,7 +105,6 @@ def _(msg: str, lang: str | None = None, context: str | None = None) -> str:
 	        _('Change', context='Coins')
 	"""
 	from frappe.translate import get_all_translations
-	from frappe.utils import is_html, strip_html_tags
 
 	if not hasattr(local, "lang"):
 		local.lang = lang or "en"
@@ -113,25 +112,28 @@ def _(msg: str, lang: str | None = None, context: str | None = None) -> str:
 	if not lang:
 		lang = local.lang
 
+	all_translations = get_all_translations(lang)
 	non_translated_string = msg
-
-	if is_html(msg):
-		msg = strip_html_tags(msg)
 
 	# msg should always be unicode
 	msg = as_unicode(msg).strip()
+	msg_with_html = as_unicode(non_translated_string).strip()
+	msg_list = [msg, msg_with_html]
 
-	translated_string = ""
+	for msg in msg_list:
+		translated_string = ""
 
-	all_translations = get_all_translations(lang)
-	if context:
-		string_key = f"{msg}:{context}"
-		translated_string = all_translations.get(string_key)
+		if context:
+			string_key = f"{msg}:{context}"
+			translated_string = all_translations.get(string_key)
 
-	if not translated_string:
-		translated_string = all_translations.get(msg)
+		if not translated_string:
+			translated_string = all_translations.get(msg)
 
-	return translated_string or non_translated_string
+		if translated_string:
+			return translated_string
+
+	return non_translated_string
 
 
 def _lt(msg: str, lang: str | None = None, context: str | None = None):

@@ -218,6 +218,10 @@ scheduler_events = {
 		"30 * * * *": [],
 		# Daily but offset by 45 minutes
 		"45 0 * * *": [],
+		# Daily at 6:00 AM.
+		"0 6 * * *": [
+			"frappe.core.doctype.security_settings.security_settings_alert.check_security_txt_expiry",
+		],
 	},
 	"all": [
 		"frappe.email.queue.flush",

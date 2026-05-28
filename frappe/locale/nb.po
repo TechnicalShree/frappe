@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-01-02 22:45+0000\n"
-"PO-Revision-Date: 2026-01-21 10:33\n"
+"PO-Revision-Date: 2026-04-22 13:14\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Norwegian Bokmal\n"
 "MIME-Version: 1.0\n"
@@ -1490,7 +1490,7 @@ msgstr "Legg til ny fane"
 
 #: frappe/utils/password_strength.py:187
 msgid "Add numbers or special characters."
-msgstr ""
+msgstr "Legg til tall eller spesialtegn."
 
 #: frappe/public/js/print_format_builder/PrintFormatSection.vue:125
 msgid "Add page break"
@@ -2868,7 +2868,7 @@ msgstr "Legg ved dokumentutskrift"
 #. Label of a Select field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attach Files"
-msgstr ""
+msgstr "Legg ved filer"
 
 #. Option for the 'Type' (Select) field in DocType 'DocField'
 #. Option for the 'Field Type' (Select) field in DocType 'Custom Field'
@@ -2961,7 +2961,7 @@ msgstr "Vedlegg fjernet"
 #. Label of a Section Break field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "Attachment Settings"
-msgstr ""
+msgstr "Vedleggsinnstillinger"
 
 #. Label of a Code field in DocType 'Email Queue'
 #. Label of a Table field in DocType 'Newsletter'
@@ -3238,7 +3238,7 @@ msgstr "Automatisk kobling kan bare aktiveres hvis Innkommende er aktivert."
 
 #: frappe/email/doctype/email_queue/email_queue.js:44
 msgid "Automatic sending of emails is disabled via site config."
-msgstr ""
+msgstr "Automatisk sending av e-post er deaktivert via nettstedskonfigurasjon."
 
 #. Description of a DocType
 #: frappe/automation/doctype/assignment_rule/assignment_rule.json
@@ -5380,7 +5380,7 @@ msgstr "Vanlige navn og etternavn er lette å gjette."
 
 #: frappe/utils/password_strength.py:186
 msgid "Common words are easy to guess."
-msgstr ""
+msgstr "Vanlige ord er enkle å gjette."
 
 #. Name of a DocType
 #. Option for the 'Communication Type' (Select) field in DocType
@@ -5399,7 +5399,7 @@ msgstr "Kommunikasjon"
 #. Label of a Datetime field in DocType 'Communication Link'
 #: frappe/core/doctype/communication_link/communication_link.json
 msgid "Communication Date"
-msgstr ""
+msgstr "Kommunikasjonsdato"
 
 #. Name of a DocType
 #: frappe/core/doctype/communication_link/communication_link.json
@@ -6788,7 +6788,7 @@ msgstr "Mal for dataimport"
 
 #: frappe/core/doctype/data_import/data_import.py:66
 msgid "Data Import is not allowed for {0}. Enable 'Allow Import' in DocType settings."
-msgstr ""
+msgstr "Dataimport er ikke tillatt for {0}. Aktiver 'Tillat Import' i DocType-innstillinger."
 
 #: frappe/custom/doctype/customize_form/customize_form.py:619
 msgid "Data Too Long"
@@ -7877,7 +7877,7 @@ msgstr "Lenke (DocType)"
 
 #: frappe/public/js/form_builder/components/Field.vue:162
 msgid "DocType Missing"
-msgstr ""
+msgstr "DocType mangler"
 
 #. Name of a DocType
 #. Option for the 'Applied On' (Select) field in DocType 'Property Setter'
@@ -9487,7 +9487,7 @@ msgstr "Skriv inn koden som vises i OTP-appen."
 
 #: frappe/public/js/frappe/views/communication.js:794
 msgid "Enter Email Recipient(s) in the To, CC, or BCC fields"
-msgstr ""
+msgstr "Skriv inn e-postmottaker(e) i feltene Til, CC eller BCC"
 
 #. Label of a Link field in DocType 'Customize Form'
 #: frappe/custom/doctype/customize_form/customize_form.json
@@ -10223,7 +10223,7 @@ msgstr "Henter standard globale søkedokumenter."
 
 #: frappe/website/doctype/web_form/web_form.js:165
 msgid "Fetching fields from {0}..."
-msgstr ""
+msgstr "Henter felt fra {0}..."
 
 #. Label of a Select field in DocType 'Assignment Rule'
 #. Label of a Select field in DocType 'Document Naming Rule Condition'
@@ -10535,7 +10535,7 @@ msgstr "Filtypen {0} er ikke tillatt"
 
 #: frappe/public/js/frappe/file_uploader/FileUploader.vue:615
 msgid "File upload failed."
-msgstr ""
+msgstr "Filopplasting mislyktes."
 
 #: frappe/core/doctype/file/file.py:366 frappe/core/doctype/file/file.py:433
 msgid "File {0} does not exist"
@@ -11245,7 +11245,7 @@ msgstr "Fra"
 #. Label of a Select field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Attach Field"
-msgstr ""
+msgstr "Fra vedleggsfelt"
 
 #. Label of a Date field in DocType 'Dashboard Chart'
 #: frappe/desk/doctype/dashboard_chart/dashboard_chart.json
@@ -11265,7 +11265,7 @@ msgstr "Fra dokumenttype (DocType)"
 #. Option for the 'Attach Files' (Select) field in DocType 'Notification'
 #: frappe/email/doctype/notification/notification.json
 msgid "From Field"
-msgstr ""
+msgstr "Fra felt"
 
 #. Label of a Data field in DocType 'Communication'
 #: frappe/core/doctype/communication/communication.json
@@ -13479,7 +13479,7 @@ msgstr "Ugyldig påloggingsinformasjon."
 
 #: frappe/email/smtp.py:138
 msgid "Invalid Credentials for Email Account: {0}"
-msgstr ""
+msgstr "Ugyldig påloggingsinformasjon for e-postkonto: {0}"
 
 #: frappe/utils/data.py:106 frappe/utils/data.py:255
 msgid "Invalid Date"
@@ -17341,7 +17341,7 @@ msgstr "Ingen kontakter koblet til dokumentet"
 
 #: frappe/website/doctype/web_form/web_form.js:177
 msgid "No currency fields in {0}"
-msgstr ""
+msgstr "Ingen valutafelt i {0}"
 
 #: frappe/desk/query_report.py:379
 msgid "No data to export"
@@ -17455,7 +17455,7 @@ msgstr "Ingen mal funnet på stien: {0}"
 
 #: frappe/core/page/permission_manager/permission_manager.js:357
 msgid "No user has the role <strong>{0}</strong>"
-msgstr ""
+msgstr "Ingen bruker har rollen <strong>{0}</strong>"
 
 #: frappe/public/js/frappe/form/controls/multiselect_list.js:257
 msgid "No values to show"
@@ -17686,7 +17686,7 @@ msgstr "Ingen rettigheter til å lese {0}"
 
 #: frappe/public/js/frappe/file_uploader/FileUploader.vue:602
 msgid "Not permitted. {0}."
-msgstr ""
+msgstr "Ikke tillatt. {0}."
 
 #. Label of a Link in the Tools Workspace
 #. Name of a DocType
@@ -18046,11 +18046,11 @@ msgstr "OTP-utsteders navn"
 #. Label of a Small Text field in DocType 'System Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP SMS Template"
-msgstr ""
+msgstr "OTP SMS-mal"
 
 #: frappe/core/doctype/system_settings/system_settings.py:163
 msgid "OTP SMS Template must contain <code>{0}</code> placeholder to insert the OTP."
-msgstr ""
+msgstr "OTP SMS-malen må inneholde plassholderen <code>{0}</code> for å sette inn OTP."
 
 #: frappe/twofactor.py:455
 msgid "OTP Secret Reset - {0}"
@@ -18064,7 +18064,7 @@ msgstr "Engangspassordet er tilbakestilt. Ny registrering kreves ved neste pålo
 #. Settings'
 #: frappe/core/doctype/system_settings/system_settings.json
 msgid "OTP placeholder should be defined as <code>{{ otp }}</code> "
-msgstr ""
+msgstr "OTP-plassholder skal defineres som <code>{{ otp }}</code> "
 
 #: frappe/templates/includes/login/login.js:363
 msgid "OTP setup using OTP App was not completed. Please contact Administrator."
@@ -19021,7 +19021,7 @@ msgstr "Finner ikke passord for {0} {1} {2}"
 
 #: frappe/core/doctype/user/user.py:1206
 msgid "Password requirements not met"
-msgstr ""
+msgstr "Passordkravene er ikke oppfylt"
 
 #: frappe/core/doctype/user/user.py:1040
 msgid "Password reset instructions have been sent to your email"
@@ -19100,7 +19100,7 @@ msgstr "Sti til privat nøkkelfil"
 
 #: frappe/modules/utils.py:209
 msgid "Path {0} is not within module {1}"
-msgstr ""
+msgstr "Sti {0} er ikke innenfor modul {1}"
 
 #: frappe/website/path_resolver.py:202
 msgid "Path {0} it not a valid path"
@@ -19627,7 +19627,7 @@ msgstr "Lagre dokumentet før du fjerner tildeling"
 
 #: frappe/automation/doctype/auto_repeat/auto_repeat.js:89
 msgid "Please save the form before previewing the message"
-msgstr ""
+msgstr "Vennligst lagre skjemaet før du forhåndsviser meldingen"
 
 #: frappe/public/js/frappe/views/reports/report_view.js:1718
 msgid "Please save the report first"
@@ -19659,7 +19659,7 @@ msgstr "Velg X- og Y-feltene"
 
 #: frappe/public/js/form_builder/components/Field.vue:161
 msgid "Please select a DocType in options before setting filters"
-msgstr ""
+msgstr "Vennligst velg en DocType i Alternativer før du setter Filtre"
 
 #: frappe/utils/__init__.py:117
 msgid "Please select a country code for field {1}."
@@ -19765,7 +19765,7 @@ msgstr "Spesifiser en gyldig overordnet dokumenttype (DocType) for {0}"
 
 #: frappe/email/doctype/notification/notification.py:96
 msgid "Please specify the field from which to attach files"
-msgstr ""
+msgstr "Vennligst oppgi feltet som filer skal vedlegges fra"
 
 #: frappe/email/doctype/notification/notification.py:90
 msgid "Please specify which date field must be checked"
@@ -24776,7 +24776,7 @@ msgstr "Størrelse (MB)"
 
 #: frappe/public/js/frappe/file_uploader/FileUploader.vue:608
 msgid "Size exceeds the maximum allowed file size."
-msgstr ""
+msgstr "Størrelsen overskrider den maksimalt tillatte filstørrelsen."
 
 #: frappe/public/js/frappe/widgets/onboarding_widget.js:82
 #: frappe/public/js/onboarding_tours/onboarding_tours.js:18
@@ -28544,7 +28544,7 @@ msgstr "Bruk TLS"
 
 #: frappe/utils/password_strength.py:187
 msgid "Use a few uncommon words together."
-msgstr ""
+msgstr "Bruk noen uvanlige ord sammen."
 
 #: frappe/utils/password_strength.py:34
 msgid "Use a few words, avoid common phrases."
@@ -29292,7 +29292,7 @@ msgstr "Vis nettsted"
 
 #: frappe/core/page/permission_manager/permission_manager.js:390
 msgid "View all {0} users"
-msgstr ""
+msgstr "Vis alle {0} brukere"
 
 #: frappe/www/confirm_workflow_action.html:12
 msgid "View document"
@@ -29952,7 +29952,7 @@ msgstr "Arbeidsflytbygger ID"
 
 #: frappe/workflow/doctype/workflow/workflow.js:11
 msgid "Workflow Builder allows you to create workflows visually. You can drag and drop states and link them to create transitions. Also you can update their properties from the sidebar."
-msgstr ""
+msgstr "Arbeidsflytbygger lar deg opprette arbeidsflyter visuelt. Du kan dra og slippe tilstander og koble dem sammen for å opprette overganger. Du kan også oppdatere egenskapene deres fra Sidefelt."
 
 #. Label of a JSON field in DocType 'Workflow'
 #: frappe/workflow/doctype/workflow/workflow.json
@@ -30133,7 +30133,7 @@ msgstr "XLSX"
 
 #: frappe/public/js/frappe/file_uploader/FileUploader.vue:620
 msgid "XMLHttpRequest Error"
-msgstr ""
+msgstr "XMLHttpRequest-feil"
 
 #. Label of a Table field in DocType 'Dashboard Chart'
 #: frappe/desk/doctype/dashboard_chart/dashboard_chart.json
@@ -30395,7 +30395,7 @@ msgstr "Du kan bare angi tre egendefinerte dokumenttyper (DocType) i dokumenttyp
 
 #: frappe/handler.py:230
 msgid "You can only upload JPG, PNG, GIF, PDF, TXT, CSV or Microsoft documents."
-msgstr ""
+msgstr "Du kan kun laste opp JPG, PNG, GIF, PDF, TXT, CSV eller Microsoft-dokumenter."
 
 #: frappe/core/doctype/data_export/exporter.py:199
 msgid "You can only upload upto 5000 records in one go. (may be less in some cases)"
@@ -30507,7 +30507,7 @@ msgstr ""
 
 #: frappe/core/doctype/data_import/data_import.py:73
 msgid "You do not have import permission for {0}"
-msgstr ""
+msgstr "Du har ikke importtillatelse for {0}"
 
 #: frappe/desk/query_report.py:899
 msgid "You do not have permission to access {0}: {1}."
@@ -33010,7 +33010,7 @@ msgstr "{0} uker siden"
 
 #: frappe/core/page/permission_manager/permission_manager.js:373
 msgid "{0} with the role <strong>{1}</strong>"
-msgstr ""
+msgstr "{0} med rollen <strong>{1}</strong>"
 
 #: frappe/public/js/frappe/utils/pretty_date.js:39
 msgid "{0} y"

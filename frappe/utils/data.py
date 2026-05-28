@@ -1385,7 +1385,7 @@ def money_in_words(
 		out = _(main_currency, context="Currency") + " " + _("Zero")
 	# 0.XX
 	elif main == "0":
-		out = in_words(fraction, in_million).title() + " " + fraction_currency
+		out = in_words(fraction, in_million).title() + " " + _(fraction_currency, context="Currency")
 	else:
 		if main_currency == "DZD":
 			# Use Dinars for Algerian Compliance
@@ -1394,7 +1394,13 @@ def money_in_words(
 			out = _(main_currency, context="Currency") + " " + in_words(main, in_million).title()
 		if cint(fraction):
 			out = (
-				out + " " + _("and") + " " + in_words(fraction, in_million).title() + " " + fraction_currency
+				out
+				+ " "
+				+ _("and")
+				+ " "
+				+ in_words(fraction, in_million).title()
+				+ " "
+				+ _(fraction_currency, context="Currency")
 			)
 
 	if main_currency == "DZD":
@@ -2182,6 +2188,7 @@ def guess_date_format(date_string: str) -> str:
 		r"%y.%m.%d",
 		r"%d %b %Y",
 		r"%d %B %Y",
+		r"%d-%b-%Y",
 	]
 
 	TIME_FORMATS = [
